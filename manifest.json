@@ -13,7 +13,7 @@
           "type": "color",
           "description": "brand_color_description",
           "label": "brand_color_label",
-          "value": "rgba(102, 201, 213, 1)"
+          "value": "#66C9D5"
         },
         {
           "identifier": "brand_text_color",
@@ -27,21 +27,21 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "rgba(17, 111, 141, 1)"
+          "value": "#116F8D"
         },
         {
           "identifier": "link_color",
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "rgba(188, 213, 48, 1)"
+          "value": "#BCD530"
         },
         {
           "identifier": "background_color",
           "type": "color",
           "description": "background_color_description",
           "label": "background_color_label",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "#FFFFFF"
         }
       ]
     },
