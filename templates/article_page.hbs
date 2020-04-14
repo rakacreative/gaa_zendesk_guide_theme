@@ -15,7 +15,7 @@
     <aside class="article-sidebar" aria-labelledby="section-articles-title">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">
-          <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
+          <button type="btn btn-primary" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
               <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
             </svg>
@@ -136,8 +136,8 @@
           <div class="article-votes">
             <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
             <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
-              {{vote 'up' role='radio' class='button article-vote article-vote-up' selected_class="button-primary"}}
-              {{vote 'down' role='radio' class='button article-vote article-vote-down' selected_class="button-primary"}}
+              {{vote 'up' role='radio' class='btn btn-primary article-vote article-vote-up' selected_class="btn-primary"}}
+              {{vote 'down' role='radio' class='btn btn-primary article-vote article-vote-down' selected_class="btn-primary"}}
             </div>
             <small class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
@@ -273,7 +273,7 @@
               <div class="comment-container">
                 {{wysiwyg 'body'}}
                 <div class="comment-form-controls">
-                  {{input type='submit' class="button button-large"}}
+                  {{input type='submit' class="btn btn-primary"}}
                 </div>
               </div>
             {{/form}}
