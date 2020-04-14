@@ -1,57 +1,61 @@
 /***** Pagination *****/
 
 .pagination {
-  margin: 20px 0;
-  text-align: center;
+    margin: 20px 0;
+    text-align: center;
 
-  &-next, &-prev, &-first, &-last {
-    display: inline-block;
-    &-link {
-      @extend .button;
-    }
-  }
-
-  &-first, &-last {
-    &-link {
-      padding: 0 10px;
+    &-next,
+    &-prev,
+    &-first,
+    &-last {
+        display: inline-block;
+        &-link {
+            //@extend .button;
+        }
     }
 
-    &-text {
-     @include visually-hidden;
-    }
-  }
+    &-first,
+    &-last {
+        &-link {
+            padding: 0 10px;
+        }
 
-  &-next {
-    &-link {
-      padding-right: 10px;
+        &-text {
+            @include visually-hidden;
+        }
     }
-    &-text {
-      margin-right: 10px;
-    }
-    [dir="rtl"] & {
-      &-link {
-        padding-left: 10px;
-      }
-      &-text {
-        margin-left: 10px;
-      }
-    }
-  }
 
-  &-prev {
-    &-link {
-      padding-left: 10px;
+    &-next {
+        &-link {
+            padding-right: 10px;
+        }
+        &-text {
+            margin-right: 10px;
+        }
+        [dir="rtl"] & {
+            &-link {
+                padding-left: 10px;
+            }
+            &-text {
+                margin-left: 10px;
+            }
+        }
     }
-    &-text {
-      margin-left: 10px;
+
+    &-prev {
+        &-link {
+            padding-left: 10px;
+        }
+        &-text {
+            margin-left: 10px;
+        }
+        [dir="rtl"] & {
+            &-link {
+                padding-right: 10px;
+            }
+            &-text {
+                margin-right: 10px;
+            }
+        }
     }
-    [dir="rtl"] & {
-      &-link {
-        padding-right: 10px;
-      }
-      &-text {
-        margin-right: 10px;
-      }
-    }
-  }
 }
