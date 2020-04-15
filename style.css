@@ -417,10 +417,10 @@ ul {
 }
 
 /***** Header *****/
-.logo img {
-  display: block;
-  height: 73px;
-  width: 262px;
+.layout-logo img {
+  display: inline;
+  height: auto !important;
+  width: auto !important;
 }
 
 .user-nav {
@@ -448,6 +448,10 @@ ul {
 .user-nav[aria-expanded="true"] > a {
   display: block;
   margin: 20px;
+}
+
+.nav-wrapper {
+  text-align: right;
 }
 
 .nav-wrapper a {
@@ -738,7 +742,7 @@ ul {
   background-position: center;
   background-size: cover;
   height: 300px;
-  padding: 0 20px;
+  margin-bottom: 36px;
   text-align: center;
   width: 100%;
 }
@@ -748,6 +752,15 @@ ul {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+.hero__heading {
+  color: #fff;
+}
+
+.hero__intro {
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .hero .search {
@@ -845,27 +858,23 @@ ul {
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  .blocks-list {
-    margin: 0 -15px;
-  }
-}
-
 .blocks-item {
   border: 1px solid #66c9d5;
   border-radius: 4px;
   box-sizing: border-box;
   color: #66c9d5;
   display: flex;
-  flex: 1 0 340px;
   margin: 0 0 30px;
   max-width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .blocks-item {
     margin: 0 15px 30px;
+    flex: 0 0 30%;
+    width: 30%;
   }
 }
 
@@ -916,7 +925,8 @@ ul {
 
 .blocks-item-title {
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .blocks-item-description {
@@ -930,12 +940,14 @@ ul {
 
 /***** Homepage *****/
 .section {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 @media (min-width: 768px) {
   .section {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    padding-top: 60px;
   }
 }
 
@@ -1014,8 +1026,7 @@ ul {
 
 .community,
 .activity {
-  border-top: 1px solid #ddd;
-  padding: 30px 0;
+  padding: 36px 0;
 }
 
 /***** Recent activity *****/
