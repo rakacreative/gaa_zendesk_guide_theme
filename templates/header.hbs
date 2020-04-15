@@ -7,47 +7,50 @@
 </a>
 
 <header class="header layout-header">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="layout-logo">
-                {{#link 'help_center'}}
+    <div class="layout-container container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6 col-lg-3">
+                <div class="layout-logo">
+                    {{#link 'help_center'}}
                     <img
                         src="{{settings.logo}}"
                         alt="{{t 'home_page' name=help_center.name}}"
                     >
-                {{/link}}
+                    {{/link}}
+                </div>
             </div>
-            <div class="nav-wrapper">
-                <button
-                    class="menu-button"
-                    aria-controls="user-nav"
-                    aria-expanded="false"
-                    aria-label="{{t 'toggle_navigation'}}"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        focusable="false"
-                        viewBox="0 0 16 16"
-                        class="icon-menu"
+            <div class="col-6 col-lg-9">
+                <div class="nav-wrapper">
+                    <button
+                        class="menu-button"
+                        aria-controls="user-nav"
+                        aria-expanded="false"
+                        aria-label="{{t 'toggle_navigation'}}"
                     >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            d="M1.5 3.5h13m-13 4h13m-13 4h13"
-                        />
-                    </svg>
-                </button>
-                <nav
-                    class="user-nav"
-                    id="user-nav"
-                >
-                    {{link 'community'}}
-                    {{link 'new_request' class='submit-a-request'}}
-                </nav>
-                {{#if signed_in}}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            focusable="false"
+                            viewBox="0 0 16 16"
+                            class="icon-menu"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                d="M1.5 3.5h13m-13 4h13m-13 4h13"
+                            />
+                        </svg>
+                    </button>
+                    <nav
+                        class="user-nav"
+                        id="user-nav"
+                    >
+                        {{link 'community'}}
+                        {{link 'new_request' class='submit-a-request'}}
+                    </nav>
+                    {{#if signed_in}}
                     <div class="user-info dropdown">
                         <button
                             class="dropdown-toggle"
@@ -84,11 +87,12 @@
                             {{link "sign_out" role="menuitem"}}
                         </div>
                     </div>
-                {{else}}
+                    {{else}}
                     {{#link "sign_in" class="sign-in"}}
-                        {{t 'sign_in'}}
+                    {{t 'sign_in'}}
                     {{/link}}
-                {{/if}}
+                    {{/if}}
+                </div>
             </div>
         </div>
     </div>

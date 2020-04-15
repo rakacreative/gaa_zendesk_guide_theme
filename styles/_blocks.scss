@@ -2,9 +2,9 @@
 /* Used in Homepage#categories and Community#topics */
 .blocks {
     &-list {
-        @include tablet {
-            margin: 0 -15px;
-        }
+        // @include tablet {
+        //     margin: 0 -15px;
+        // }
 
         display: flex;
         flex-wrap: wrap;
@@ -14,19 +14,21 @@
     }
 
     &-item {
-        @include tablet {
-            margin: 0 15px 30px;
-        }
-
         border: 1px solid $brand_color;
         border-radius: 4px;
         box-sizing: border-box;
         color: $brand_color;
         display: flex;
-        flex: 1 0 340px;
         margin: 0 0 30px;
         max-width: 100%;
         text-align: center;
+        width: 100%;
+
+        @include tablet {
+            margin: 0 15px 30px;
+            flex: 0 0 30%;
+            width: 30%;
+        }
 
         &:hover,
         &:focus,
@@ -78,7 +80,8 @@
 
     &-item-title {
         margin-bottom: 0;
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 700;
     }
 
     &-item-description {

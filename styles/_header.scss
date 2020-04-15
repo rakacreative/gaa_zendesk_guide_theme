@@ -3,10 +3,10 @@ $header-height: 71px;
 
 //.header { }
 
-.logo img {
-    display: block;
-    height: 73px;
-    width: 262px;
+.layout-logo img {
+    display: inline;
+    height: auto !important;
+    width: auto !important;
 }
 
 .user-nav {
@@ -34,6 +34,8 @@ $header-height: 71px;
 }
 
 .nav-wrapper {
+    text-align: right;
+
     a {
         @include tablet {
             display: inline-block;
