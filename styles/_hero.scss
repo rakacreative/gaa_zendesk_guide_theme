@@ -6,14 +6,28 @@
     height: 300px;
     margin-bottom: 36px;
     //padding: 0 20px;
+    position: relative;
     text-align: center;
     width: 100%;
+
+    &-overlay {
+        background-color: rgba(36,36,36,.5);
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
 
     &__inner {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100%;
+        z-index: 10;
     }
 
     &__heading {

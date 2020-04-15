@@ -743,8 +743,21 @@ ul {
   background-size: cover;
   height: 300px;
   margin-bottom: 36px;
+  position: relative;
   text-align: center;
   width: 100%;
+}
+
+.hero-overlay {
+  background-color: rgba(36, 36, 36, 0.5);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .hero__inner {
@@ -752,6 +765,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  z-index: 10;
 }
 
 .hero__heading {
@@ -856,6 +870,7 @@ ul {
   justify-content: flex-start;
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .blocks-item {
@@ -872,7 +887,7 @@ ul {
 
 @media (min-width: 768px) {
   .blocks-item {
-    margin: 0 15px 30px;
+    margin: 0 15px;
     flex: 0 0 30%;
     width: 30%;
   }
@@ -951,9 +966,23 @@ ul {
   }
 }
 
-.home-section h2 {
-  margin-bottom: 10px;
+.section-heading {
+  margin-bottom: 32px;
   text-align: center;
+}
+
+.section-callout-cards {
+  background-color: #f0f7f8;
+}
+
+@media (min-width: 1024px) {
+  .section-callout-cards {
+    padding-bottom: 80px;
+  }
+}
+
+.video .embed-responsive {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 /***** Promoted articles *****/
@@ -1011,22 +1040,23 @@ ul {
   }
 }
 
-/***** Community section in homepage *****/
-.community {
+.community h2,
+.activity h2 {
   text-align: center;
 }
 
-.community-image {
-  min-height: 300px;
-  background-image: url($community_image);
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 100%;
+.community {
+  background-color: #f0f7f8;
 }
 
-.community,
-.activity {
-  padding: 36px 0;
+.community .card {
+  background-color: transparent;
+  height: 100%;
+  text-align: center;
+}
+
+.community .buttons {
+  text-align: center;
 }
 
 /***** Recent activity *****/
