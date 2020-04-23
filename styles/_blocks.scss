@@ -20,6 +20,7 @@
         box-sizing: border-box;
         color: $brand_color;
         display: flex;
+        height: 150px;
         margin: 0 0 30px;
         max-width: 100%;
         text-align: center;
@@ -61,7 +62,7 @@
 
     &-item-link {
         color: $brand_color;
-        padding: 20px 30px;
+        padding: 16px 24px;
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -83,6 +84,7 @@
         margin-bottom: 0;
         font-size: 20px;
         font-weight: 700;
+        line-height: 1.2;
     }
 
     &-item-description {

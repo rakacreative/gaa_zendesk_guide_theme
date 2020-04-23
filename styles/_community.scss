@@ -49,7 +49,11 @@
     width: 100%;
 
     &-item {
+        height: 210px;
+        margin-bottom: 30px;
+
         .meta-group {
+            list-style-type: none;
             justify-content: center;
             margin-top: 20px;
         }
