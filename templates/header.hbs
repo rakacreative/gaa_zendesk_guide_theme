@@ -8,7 +8,7 @@
 
 <header class="header layout-header">
     <div class="layout-container container-fluid">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center py-4">
             <div class="col-6 col-lg-3">
                 <div class="layout-logo">
                     {{#link 'help_center'}}
@@ -57,28 +57,9 @@
                             aria-haspopup="true"
                         >
                             {{user_avatar class="user-avatar"}}
-                            <span class="hide-on-mobile">
-                                {{user_name}}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="12"
-                                    height="12"
-                                    focusable="false"
-                                    viewBox="0 0 12 12"
-                                    class="dropdown-chevron-icon"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"
-                                    />
-                                </svg>
-                            </span>
                         </button>
                         <div
-                            class="dropdown-menu"
+                            class="dropdown-menu dropdown-menu-right"
                             role="menu"
                         >
                             {{link "my_activities" role="menuitem"}}

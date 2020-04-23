@@ -24,7 +24,7 @@ $header-height: 71px;
         right: 0;
         left: 0;
         top: $header-height;
-        z-index: 1;
+        z-index: 1040;
 
         > a {
             display: block;
@@ -34,7 +34,12 @@ $header-height: 71px;
 }
 
 .nav-wrapper {
-    text-align: right;
+
+    @include tablet {
+        display: flex;
+        justify-content: flex-end;
+    }
+
 
     a {
         @include tablet {
@@ -42,10 +47,13 @@ $header-height: 71px;
         }
 
         border: 0;
-        color: $link_color;
+        color: #fff;
         display: none;
-        font-size: 14px;
-        padding: 0 20px 0 0;
+        font-size: 1.125rem;
+        font-weight: 700;
+        //line-height: 1.2;
+        padding: 0.125rem 1rem;
+        text-transform: uppercase;
         width: auto;
 
         [dir="rtl"] & {
@@ -57,7 +65,7 @@ $header-height: 71px;
         &:active {
             background-color: transparent;
             color: $link_color;
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         &.sign-in {
@@ -75,18 +83,19 @@ $header-height: 71px;
         @include tablet {
             display: none;
         }
-        background: none;
+        background-color: transparent;
         border: 0;
-        color: $link_color;
+        //border-radius: 30px;
+        color: #fff;
         display: inline-block;
-        margin-right: 10px;
-        padding: 0;
+        margin-left: 10px;
+        padding: 0.75rem 0.75rem;
         width: auto;
 
         .icon-menu {
             vertical-align: middle;
-            width: 13px;
-            height: 13px;
+            width: 24px;
+            height: 24px;
         }
 
         [dir="rtl"] & {
