@@ -1,17 +1,11 @@
 /***** Community *****/
 .community {
-    &-hero {
-        background-image: url($community_background_image);
-        margin-bottom: 10px;
-    }
 
     &-footer {
-        padding-top: 50px;
         text-align: center;
 
         &-title {
-            font-size: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
     }
 
