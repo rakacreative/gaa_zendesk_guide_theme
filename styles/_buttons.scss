@@ -1,6 +1,7 @@
 /***** Buttons *****/
 .button,
-input[type="submit"] {
+input[type="submit"],
+button[type="button"] {
     display: inline-block;
     font-weight: 700;
     color: #ffffff;
