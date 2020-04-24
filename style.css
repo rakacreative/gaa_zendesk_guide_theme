@@ -247,7 +247,8 @@ ul {
 
 /***** Buttons *****/
 .button,
-input[type="submit"] {
+input[type="submit"],
+button[type="button"] {
   display: inline-block;
   font-weight: 700;
   color: #ffffff;
@@ -281,7 +282,10 @@ input[type="submit"] {
 .button:hover, .button:active, .button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+button[type="button"]:hover,
+button[type="button"]:active,
+button[type="button"]:focus {
   background-color: #a3b926;
   border-color: #c7df43;
   color: #fff;
@@ -290,7 +294,9 @@ input[type="submit"]:focus {
 
 .button:focus, .button.focus,
 input[type="submit"]:focus,
-input[type="submit"].focus {
+input[type="submit"].focus,
+button[type="button"]:focus,
+button[type="button"].focus {
   border-color: #c7df43;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
@@ -300,7 +306,10 @@ input[type="submit"].focus {
 .button.disabled, .button:disabled, .button[data-disabled],
 input[type="submit"].disabled,
 input[type="submit"]:disabled,
-input[type="submit"][data-disabled] {
+input[type="submit"][data-disabled],
+button[type="button"].disabled,
+button[type="button"]:disabled,
+button[type="button"][data-disabled] {
   cursor: default;
   box-shadow: none;
 }
@@ -760,9 +769,8 @@ input[type="submit"][data-disabled] {
 }
 
 .breadcrumbs li {
-  color: lighten(#116f8d, 20%);
+  color: #3793b4;
   display: inline;
-  font-weight: 300;
   font-size: 13px;
   max-width: 450px;
   overflow: hidden;
@@ -774,8 +782,13 @@ input[type="submit"][data-disabled] {
   margin: 0 4px;
 }
 
-.breadcrumbs li a:visited {
-  color: #bcd530;
+.breadcrumbs li a {
+  color: #3793b4;
+}
+
+.breadcrumbs li a:hover, .breadcrumbs li a:focus {
+  color: #0c2a35;
+  text-decoration: underline;
 }
 
 /***** Search field *****/

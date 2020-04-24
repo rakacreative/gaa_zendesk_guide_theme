@@ -8,9 +8,8 @@
     padding: 0;
 
     li {
-        color: $secondary-text-color;
+        color: #3793b4;
         display: inline;
-        font-weight: $font-weight-light;
         font-size: $font-size-small;
         max-width: 450px;
         overflow: hidden;
@@ -20,8 +19,15 @@
             content: ">";
             margin: 0 4px;
         }
-        a:visited {
-            color: $link_color;
+
+        a {
+            color: #3793b4;
+
+            &:hover,
+            &:focus {
+                color: #0c2a35;
+                text-decoration: underline;
+            }
         }
     }
 }
