@@ -13,6 +13,11 @@
         margin-bottom: 0;
     }
 
+    &-community {
+        background-image: url($community_background_image);
+        margin-bottom: 10px;
+    }
+
     &-overlay {
         background-color: rgba(36,36,36,.5);
         bottom: 0;

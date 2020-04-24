@@ -1,89 +1,113 @@
 /***** Buttons *****/
-.button {
-    @include tablet {
-        width: auto;
-    }
-
-    background-color: transparent;
-    border: 1px solid $button-color;
-    border-radius: 4px;
-    color: $button-color;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 2.34; //Taken from Zendesk garden bedrock
-    margin: 0;
-    padding: 0 20px;
-    text-align: center;
-    transition: background-color 0.12s ease-in-out, border-color 0.12s ease-in-out,
-        color 0.15s ease-in-out;
-    user-select: none;
-    white-space: nowrap;
-    width: 100%;
-    -webkit-touch-callout: none;
-
-    &:hover,
-    &:active,
-    &:focus,
-    &.button-primary {
-        background-color: $brand_color;
-        color: $brand_text_color;
-        text-decoration: none;
-    }
-
-    &.button-primary {
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: $hover-button-color;
-            border-color: $hover-button-color;
-        }
-    }
-
-    &[data-disabled] {
-        cursor: default;
-    }
-}
-
-.button-large,
+.button,
 input[type="submit"] {
-    @include tablet {
-        width: auto;
-    }
-
+    display: inline-block;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
-    background-color: $button-color;
-    border: 0;
-    border-radius: 4px;
-    color: $brand_text_color;
-    font-size: 14px;
-    font-weight: $font-weight-base;
-    line-height: 2.72;
-    min-width: 190px;
-    padding: 0 1.9286em;
-    width: 100%;
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #bcd530;
+    border-color: #bcd530;
+    border: 2px solid transparent;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    padding: 1rem 1.75rem 0.625rem;
+    font-family: "Khula", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    border-radius: 50px;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 
     &:hover,
     &:active,
     &:focus {
-        background-color: $hover-button-color;
+        background-color: #a3b926;
+        border-color: #c7df43;
+        color: #fff;
+        text-decoration: none;
     }
 
-    &[disabled] {
-        background-color: #ddd;
-    }
-}
-
-.button-secondary {
-    color: $secondary-text-color;
-    border: 1px solid $border-color;
-    background-color: transparent;
-
-    &:hover,
     &:focus,
-    &:active {
-        color: $text_color;
-        border: 1px solid $border-color;
-        background-color: $primary-shade;
+    &.focus {
+        border-color: #c7df43;
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
+        box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
+    }
+
+    // &.button-primary {
+    //     &:hover,
+    //     &:focus,
+    //     &:active {
+    //         background-color: $hover-button-color;
+    //         border-color: $hover-button-color;
+    //     }
+    // }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        cursor: default;
+        box-shadow: none;
     }
 }
+
+// .button-large,
+// input[type="submit"] {
+//     @include tablet {
+//         width: auto;
+//     }
+
+//     cursor: pointer;
+//     background-color: $button-color;
+//     border: 0;
+//     border-radius: 4px;
+//     color: $brand_text_color;
+//     font-size: 14px;
+//     font-weight: $font-weight-base;
+//     line-height: 2.72;
+//     min-width: 190px;
+//     padding: 0 1.9286em;
+//     width: 100%;
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//         background-color: $hover-button-color;
+//     }
+
+//     &[disabled] {
+//         background-color: #ddd;
+//     }
+// }
+
+// .button-secondary {
+//     color: $secondary-text-color;
+//     border: 1px solid $border-color;
+//     background-color: transparent;
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         color: $text_color;
+//         border: 1px solid $border-color;
+//         background-color: $primary-shade;
+//     }
+// }

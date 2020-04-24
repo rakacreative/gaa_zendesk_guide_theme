@@ -2,10 +2,6 @@
 /* Used in Homepage#categories and Community#topics */
 .blocks {
     &-list {
-        // @include tablet {
-        //     margin: 0 -15px;
-        // }
-
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -88,7 +84,6 @@
     }
 
     &-item-description {
-        font-weight: $font-weight-light;
         margin: 0;
     }
 

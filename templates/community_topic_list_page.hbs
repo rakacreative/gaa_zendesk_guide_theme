@@ -1,4 +1,4 @@
-<section class="section hero">
+<section class="section hero hero-community">
     <div class="hero-overlay"></div>
     <div class="hero__inner layout-container container-fluid container-sm">
         <h1 class="hero__heading">Welcome to your virtual seafood community</h1>
@@ -15,6 +15,12 @@
         >
             {{breadcrumbs}}
         </nav>
+    </div>
+</div>
+
+<div class="intro-blurb py-4">
+    <div class="layout-container container-fluid container-sm">
+        <p>This is where the connections happen – select a topic below and start asking questions, networking with others, and creating discussions.</p>
     </div>
 </div>
 
@@ -134,9 +140,15 @@
     </div>
 </section>
 
-<section class="section community-footer">
+<section class="section community-footer section-cta block-columns bg-catskill">
     <div class="layout-container container-fluid">
-        <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
-        {{link 'new_post' class='btn btn-primary btn-sm'}}
+        <div class="row">
+            <div class="col-12">
+                <div class="content-cms">
+                    <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
+                    {{link 'new_post' class='btn btn-primary'}}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
