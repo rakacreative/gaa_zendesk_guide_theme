@@ -41,6 +41,12 @@
         //     }
         // }
     }
+
+    .dropdown-menu {
+        &[aria-expanded="true"] {
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 
 // Selector is this strong to override the styles set with ids

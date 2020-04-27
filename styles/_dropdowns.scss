@@ -44,6 +44,8 @@
 
     &[aria-expanded="true"] {
         display: block;
+        background-color: #0a5f7a;
+        border: none;
     }
 
     [role="separator"] {
@@ -57,26 +59,31 @@
     }
 
     [role="menuitem"] {
-        color: #333;
         cursor: pointer;
-        display: block;
-        padding: 7px 40px 7px 20px;
         white-space: nowrap;
         background-color: transparent;
         border: 0;
         -webkit-appearance: none;
-        text-align: start;
-        line-height: inherit;
         width: 100%;
+
+        color: #fff;
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.2;
+        padding: 1rem 1.5rem 0.75rem;
+        text-align: left;
+        text-transform: uppercase;
 
         [dir="rtl"] & {
             padding: 7px 20px 7px 40px;
         }
+
         &:hover,
         &:focus {
-            background: #f3f3f3;
+            background-color: rgba(0,0,0,.15);
             text-decoration: none;
-            color: #333;
+            color: #bcd530;
         }
 
         &[aria-selected="true"] {

@@ -10,36 +10,42 @@ $header-height: 71px;
 }
 
 .user-nav {
-    @include tablet {
-        position: relative;
-    }
     display: inline-block;
     position: absolute;
     white-space: nowrap;
 
+    @include tablet {
+        position: relative;
+    }
+
     &[aria-expanded="true"] {
-        background-color: #fff;
+        background-color: #0a5f7a;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-        border: solid 1px #ddd;
+        //border: solid 1px #ddd;
         right: 0;
-        left: 0;
-        top: $header-height;
+        left: auto;
+        top: 100%;
         z-index: 1040;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
 
         > a {
+            color: #fff;
             display: block;
-            margin: 20px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.2;
+            padding: 1rem 1.5rem 0.75rem;
+            text-align: left;
+            text-transform: uppercase;
         }
     }
 }
 
 .nav-wrapper {
-
-    @include tablet {
-        display: flex;
-        justify-content: flex-end;
-    }
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
     a {
         @include tablet {
