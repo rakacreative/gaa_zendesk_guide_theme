@@ -9,39 +9,6 @@ $header-height: 71px;
     width: auto !important;
 }
 
-.user-nav {
-    display: inline-block;
-    position: absolute;
-    white-space: nowrap;
-
-    @include tablet {
-        position: relative;
-    }
-
-    &[aria-expanded="true"] {
-        background-color: #0a5f7a;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-        //border: solid 1px #ddd;
-        right: 0;
-        left: auto;
-        top: 100%;
-        z-index: 1040;
-        padding: 0.5rem 0;
-        margin: 0.125rem 0 0;
-
-        > a {
-            color: #fff;
-            display: block;
-            font-size: 1.125rem;
-            font-weight: 700;
-            line-height: 1.2;
-            padding: 1rem 1.5rem 0.75rem;
-            text-align: left;
-            text-transform: uppercase;
-        }
-    }
-}
-
 .nav-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -76,6 +43,73 @@ $header-height: 71px;
 
         &.sign-in {
             display: inline-block;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: #0a5f7a;
+        border: none;
+
+        &[aria-expanded="true"] {
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+
+            [role="menuitem"] {
+                color: #fff;
+                display: block;
+                font-size: 1.125rem;
+                font-weight: 700;
+                line-height: 1.2;
+                padding: 1rem 1.5rem 0.75rem;
+                text-align: left;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 0, 0, 0.15);
+                    text-decoration: none;
+                    color: #bcd530;
+                }
+            }
+        }
+    }
+
+    .user-nav {
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+
+        @include tablet {
+            position: relative;
+        }
+
+        &[aria-expanded="true"] {
+            background-color: #0a5f7a;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+            //border: solid 1px #ddd;
+            right: 0;
+            left: auto;
+            top: 100%;
+            z-index: 1040;
+            padding: 0.5rem 0;
+            margin: 0.125rem 0 0;
+
+            > a {
+                color: #fff;
+                display: block;
+                font-size: 1.125rem;
+                font-weight: 700;
+                line-height: 1.2;
+                padding: 1rem 1.5rem 0.75rem;
+                text-align: left;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 0, 0, 0.15);
+                    text-decoration: none;
+                    color: #bcd530;
+                }
+            }
         }
     }
 
