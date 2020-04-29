@@ -27,8 +27,7 @@
 
     &[aria-expanded="true"] {
         display: block;
-        // background-color: #0a5f7a;
-        // border: none;
+        background-color: #fff;
     }
 
     [role="separator"] {
@@ -62,9 +61,6 @@
 
         &:hover,
         &:focus {
-            //background-color: rgba(0, 0, 0, 0.15);
-            //text-decoration: none;
-            //color: #bcd530;
             color: #16181b;
             text-decoration: none;
             background-color: #f8f9fa;

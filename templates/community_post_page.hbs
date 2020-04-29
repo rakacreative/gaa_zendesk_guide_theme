@@ -9,8 +9,8 @@
     </div>
 </div>
 <div class="layout-container container-fluid">
-    <div class="post-container">
-        <div class="post">
+    <div class="post-container pt-2 pb-5 row">
+        <div class="post col-12 col-lg-8">
             <article id="main-content">
                 <header class="post-header">
                     <div class="post-title">
@@ -427,10 +427,10 @@
             <p class="comment-callout">{{comment_callout}}</p>
         </div>
 
-        <section class="post-sidebar">
+        <section class="post-sidebar col-12 col-lg-3 offset-lg-1">
             <h2 class="post-sidebar-title">{{t 'suggest_new_post'}}</h2>
             <span class="post-to-community">
-                {{link 'new_post' class='btn btn-primary btn-lg'}}
+                {{link 'new_post' class='btn btn-primary btn-sm'}}
             </span>
         </section>
     </div>

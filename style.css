@@ -246,12 +246,11 @@ ul {
 }
 
 /***** Buttons *****/
-.button,
-input[type="submit"],
-button[type="button"] {
+.button, .community-follow button,
+input[type="submit"] {
   display: inline-block;
   font-weight: 700;
-  color: #ffffff;
+  color: #606673;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -261,8 +260,7 @@ button[type="button"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #bcd530;
-  border-color: #bcd530;
+  background-color: transparent;
   border: 2px solid transparent;
   letter-spacing: 0.25px;
   text-transform: uppercase;
@@ -279,37 +277,28 @@ button[type="button"] {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.button:hover, .button:active, .button:focus,
+.button:hover, .community-follow button:hover, .button:active, .community-follow button:active, .button:focus, .community-follow button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
-input[type="submit"]:focus,
-button[type="button"]:hover,
-button[type="button"]:active,
-button[type="button"]:focus {
-  background-color: #a3b926;
-  border-color: #c7df43;
-  color: #fff;
+input[type="submit"]:focus {
+  color: #606673;
   text-decoration: none;
 }
 
-.button:focus, .button.focus,
-input[type="submit"]:focus,
-input[type="submit"].focus,
-button[type="button"]:focus,
-button[type="button"].focus {
+.button.button-primary:hover, .community-follow button.button-primary:hover, .button.button-primary:focus, .community-follow button.button-primary:focus, .button.button-primary.focus, .community-follow button.button-primary.focus, .button.button-primary:active, .community-follow button.button-primary:active,
+input[type="submit"].button-primary:hover,
+input[type="submit"].button-primary:focus,
+input[type="submit"].button-primary.focus,
+input[type="submit"].button-primary:active {
+  background-color: #a3b926;
   border-color: #c7df43;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
+  color: #fff;
 }
 
-.button.disabled, .button:disabled, .button[data-disabled],
+.button.disabled, .community-follow button.disabled, .button:disabled, .community-follow button:disabled, .button[data-disabled], .community-follow button[data-disabled],
 input[type="submit"].disabled,
 input[type="submit"]:disabled,
-input[type="submit"][data-disabled],
-button[type="button"].disabled,
-button[type="button"]:disabled,
-button[type="button"][data-disabled] {
+input[type="submit"][data-disabled] {
   cursor: default;
   box-shadow: none;
 }
@@ -568,12 +557,9 @@ button[type="button"][data-disabled] {
   display: inline-block;
 }
 
-.nav-wrapper .dropdown-menu {
+.nav-wrapper .dropdown-menu[aria-expanded="true"] {
   background-color: #0a5f7a;
   border: none;
-}
-
-.nav-wrapper .dropdown-menu[aria-expanded="true"] {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -835,7 +821,7 @@ button[type="button"][data-disabled] {
 }
 
 .search input[type="search"] {
-  background-color: #f0f7f8;
+  background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0;
   box-sizing: border-box;
@@ -1046,6 +1032,7 @@ button[type="button"][data-disabled] {
   max-width: 100%;
   text-align: center;
   width: 100%;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -1782,6 +1769,7 @@ button[type="button"][data-disabled] {
 
 /***** Social share links *****/
 .share {
+  background-color: transparent;
   padding: 0;
   white-space: nowrap;
 }
@@ -1797,7 +1785,7 @@ button[type="button"][data-disabled] {
 }
 
 .share a {
-  color: lighten(#116f8d, 20%);
+  color: #3596B5;
 }
 
 .share a:hover {
@@ -2250,6 +2238,72 @@ button[type="button"][data-disabled] {
   }
 }
 
+.community-follow button {
+  color: #3596B5;
+  border-color: #3596B5;
+  font-size: 1rem;
+  min-width: 145px;
+  padding: 0.5rem .35rem 0.25rem;
+  position: relative;
+  width: auto;
+}
+
+@media (min-width: 1024px) {
+  .community-follow button {
+    width: 100%;
+  }
+}
+
+.community-follow button:hover, .community-follow button:focus {
+  color: #fff;
+  background-color: #3596B5;
+  border-color: #3596B5;
+}
+
+.community-follow button:hover::after, .community-follow button:focus::after {
+  border-color: #fff;
+  color: #fff;
+}
+
+.community-follow button[data-selected="true"] {
+  color: #fff;
+  background-color: #3596B5;
+  border-color: #3596B5;
+}
+
+.community-follow button[data-selected="true"]::after {
+  border-left: 1px solid #fff;
+  color: #fff;
+}
+
+.community-follow button[data-selected="true"]:hover {
+  background-color: #3596B5;
+  border-color: #3596B5;
+}
+
+.community-follow button::after {
+  border-left: 1px solid #3596B5;
+  content: attr(data-follower-count);
+  color: #3596B5;
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 10px;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .community-follow button::after {
+    position: static;
+  }
+}
+
+[dir="rtl"] .community-follow button::after {
+  border-left: 0;
+  border-right: 1px solid #3596B5;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+}
+
 /***** Striped list *****/
 /* Used in community posts list and requests list */
 .striped-list {
@@ -2422,29 +2476,6 @@ button[type="button"][data-disabled] {
 * Content | Sidebar
 * 70%     | 30%
 */
-.post {
-  flex: 1;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 1024px) {
-  .post {
-    flex: 1 0 70%;
-    max-width: 70%;
-  }
-}
-
-.post-container {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .post-container {
-    flex-direction: row;
-  }
-}
-
 .post-header {
   align-items: center;
   display: flex;
@@ -2498,8 +2529,6 @@ button[type="button"][data-disabled] {
 }
 
 .post-content {
-  font-family: $text_font;
-  line-height: 1.6;
   word-break: break-word;
 }
 
@@ -2619,20 +2648,13 @@ button[type="button"][data-disabled] {
 
 .post-sidebar {
   border-top: 1px solid #ddd;
-  flex: 1;
-  padding: 30px 0;
   text-align: center;
 }
 
 @media (min-width: 1024px) {
   .post-sidebar {
     border: 0;
-    flex: 1 0 30%;
-    padding: 0 0 0 50px;
     text-align: initial;
-  }
-  [dir="rtl"] .post-sidebar {
-    padding: 0 50px 0 0;
   }
 }
 
@@ -4417,6 +4439,7 @@ html[dir="rtl"] .notification-left-aligned {
 
 .dropdown-menu[aria-expanded="true"] {
   display: block;
+  background-color: #fff;
 }
 
 .dropdown-menu [role="separator"] {
