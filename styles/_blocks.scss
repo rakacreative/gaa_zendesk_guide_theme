@@ -21,6 +21,7 @@
         max-width: 100%;
         text-align: center;
         width: 100%;
+        transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 
         @include tablet {
             margin: 0 15px;

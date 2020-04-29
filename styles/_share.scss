@@ -1,6 +1,7 @@
 /***** Social share links *****/
 
 .share {
+    background-color: transparent;
     padding: 0;
     white-space: nowrap;
 }
@@ -16,7 +17,7 @@
 }
 
 .share a {
-    color: $secondary-text-color;
+    color: $c-blue-lagoon;
     &:hover {
         text-decoration: none;
         color: $brand_color;

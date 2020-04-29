@@ -1,10 +1,9 @@
 /***** Buttons *****/
 .button,
-input[type="submit"],
-button[type="button"] {
+input[type="submit"] {
     display: inline-block;
     font-weight: 700;
-    color: #ffffff;
+    color: #606673;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -14,8 +13,7 @@ button[type="button"] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #bcd530;
-    border-color: #bcd530;
+    background-color: transparent;
     border: 2px solid transparent;
     letter-spacing: 0.25px;
     text-transform: uppercase;
@@ -39,28 +37,20 @@ button[type="button"] {
     &:hover,
     &:active,
     &:focus {
-        background-color: #a3b926;
-        border-color: #c7df43;
-        color: #fff;
+        color: #606673;
         text-decoration: none;
     }
 
-    &:focus,
-    &.focus {
-        border-color: #c7df43;
-        outline: 0;
-        -webkit-box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
-        box-shadow: 0 0 0 0.2rem rgba(165, 187, 47, 0.5);
+    &.button-primary {
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active {
+            background-color: #a3b926;
+            border-color: #c7df43;
+            color: #fff;
+        }
     }
-
-    // &.button-primary {
-    //     &:hover,
-    //     &:focus,
-    //     &:active {
-    //         background-color: $hover-button-color;
-    //         border-color: $hover-button-color;
-    //     }
-    // }
 
     &.disabled,
     &:disabled,

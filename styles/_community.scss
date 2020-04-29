@@ -1,6 +1,5 @@
 /***** Community *****/
 .community {
-
     &-footer {
         text-align: center;
 
@@ -92,58 +91,70 @@
     margin-bottom: 10px;
     width: 100%;
 
-    // button {
-    //   @extend .button;
-    //   @include tablet { width: auto;}
+    button {
+        @extend .button;
 
-    //   line-height: 30px;
-    //   padding: 0 10px 0 15px;
-    //   position: relative;
-    //   width: 100%;
+        color: $c-blue-lagoon;
+        border-color: $c-blue-lagoon;
+        font-size: 1rem;
+        min-width: 145px;
+        padding: 0.5rem .35rem 0.25rem;
+        position: relative;
+        width: auto;
 
-    //   &:hover { background-color: $brand_color; }
+        @include desktop {
+            width: 100%;
+        }
 
-    //   &:hover::after, &:focus::after {
-    //     border-color: $brand_text_color;
-    //     color: $brand_text_color;
-    //   }
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $c-blue-lagoon;
+            border-color: $c-blue-lagoon;
+        }
 
-    //   &[data-selected="true"] {
-    //     background-color: $brand_color;
-    //     color: $brand_text_color;
+        &:hover::after,
+        &:focus::after {
+            border-color: #fff;
+            color: #fff;
+        }
 
-    //     &::after {
-    //       border-left: 1px solid $brand_text_color;
-    //       color: $brand_text_color;
-    //     }
+        &[data-selected="true"] {
+            color: #fff;
+            background-color: $c-blue-lagoon;
+            border-color: $c-blue-lagoon;
 
-    //     &:hover {
-    //       background-color: $hover-button-color;
-    //       border-color: $hover-button-color;
-    //     }
-    //   }
+            &::after {
+                border-left: 1px solid #fff;
+                color: #fff;
+            }
 
-    //   &::after {
-    //     @include tablet {
-    //       position: static;
-    //     }
+            &:hover {
+                background-color: $c-blue-lagoon;
+                border-color: $c-blue-lagoon;
+            }
+        }
 
-    //     border-left: 1px solid $button-color;
-    //     content: attr(data-follower-count);
-    //     color: $button-color;
-    //     display: inline-block;
-    //     font-family: $heading_font;
-    //     margin-left: 15px;
-    //     padding-left: 10px;
-    //     position: absolute;
-    //     right: 10px;
+        &::after {
+            @include tablet {
+                position: static;
+            }
 
-    //     [dir="rtl"] & {
-    //       border-left: 0;
-    //       border-right: 1px solid $button-color;
-    //       margin: 0 10px 0 0;
-    //       padding: 0 10px 0 0;
-    //     }
-    //   }
-    // }
+            border-left: 1px solid $c-blue-lagoon;
+            content: attr(data-follower-count);
+            color: $c-blue-lagoon;
+            display: inline-block;
+            margin-left: 10px;
+            padding-left: 10px;
+            position: absolute;
+            //right: 10px;
+
+            [dir="rtl"] & {
+                border-left: 0;
+                border-right: 1px solid $c-blue-lagoon;
+                margin: 0 10px 0 0;
+                padding: 0 10px 0 0;
+            }
+        }
+    }
 }

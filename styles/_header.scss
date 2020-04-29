@@ -47,10 +47,9 @@ $header-height: 71px;
     }
 
     .dropdown-menu {
-        background-color: #0a5f7a;
-        border: none;
-
         &[aria-expanded="true"] {
+            background-color: #0a5f7a;
+            border: none;
             box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 
             [role="menuitem"] {
