@@ -4,7 +4,7 @@
     max-width: 650px;
 }
 
-.form-field ~ .form-field {
+.form-field {
     margin-bottom: 1.5rem;
 }
 
@@ -120,8 +120,22 @@
 }
 
 .form footer {
-    margin-top: 40px;
-    padding-top: 30px;
+    // margin-top: 40px;
+    // padding-top: 30px;
+    input[type="submit"] {
+        background-color: #bcd530;
+        border-color: #bcd530;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active {
+            background-color: #a3b926;
+            border-color: #c7df43;
+            color: #fff;
+        }
+    }
 }
 
 .form footer a {

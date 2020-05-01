@@ -42,6 +42,10 @@ input[type="submit"] {
     }
 
     &.button-primary {
+        background-color: #bcd530;
+        border-color: #bcd530;
+        color: #fff;
+
         &:hover,
         &:focus,
         &.focus,

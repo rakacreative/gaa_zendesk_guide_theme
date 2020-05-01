@@ -285,6 +285,13 @@ input[type="submit"]:focus {
   text-decoration: none;
 }
 
+.button.button-primary, .community-follow button.button-primary,
+input[type="submit"].button-primary {
+  background-color: #bcd530;
+  border-color: #bcd530;
+  color: #fff;
+}
+
 .button.button-primary:hover, .community-follow button.button-primary:hover, .button.button-primary:focus, .community-follow button.button-primary:focus, .button.button-primary.focus, .community-follow button.button-primary.focus, .button.button-primary:active, .community-follow button.button-primary:active,
 input[type="submit"].button-primary:hover,
 input[type="submit"].button-primary:focus,
@@ -372,7 +379,7 @@ input[type="submit"][data-disabled] {
   max-width: 650px;
 }
 
-.form-field ~ .form-field {
+.form-field {
   margin-bottom: 1.5rem;
 }
 
@@ -483,9 +490,16 @@ input[type="submit"][data-disabled] {
   margin: 5px 0;
 }
 
-.form footer {
-  margin-top: 40px;
-  padding-top: 30px;
+.form footer input[type="submit"] {
+  background-color: #bcd530;
+  border-color: #bcd530;
+  color: #fff;
+}
+
+.form footer input[type="submit"]:hover, .form footer input[type="submit"]:focus, .form footer input[type="submit"].focus, .form footer input[type="submit"]:active {
+  background-color: #a3b926;
+  border-color: #c7df43;
+  color: #fff;
 }
 
 .form footer a {
@@ -641,7 +655,6 @@ input[type="submit"][data-disabled] {
   border: 0;
   color: #fff;
   display: inline-block;
-  margin-left: 10px;
   padding: 0.75rem 0.75rem;
   width: auto;
 }
@@ -782,7 +795,7 @@ input[type="submit"][data-disabled] {
 
 /***** Breadcrumbs *****/
 .breadcrumbs {
-  margin: 0 0 15px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -932,22 +945,6 @@ input[type="submit"][data-disabled] {
   width: 600px;
 }
 
-.section-header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px 0;
-}
-
-@media (min-width: 768px) {
-  .section-header {
-    align-items: baseline;
-    flex-direction: row;
-    margin: 0;
-  }
-}
-
 .section-header .section-subscribe {
   flex-shrink: 0;
   margin-bottom: 10px;
@@ -960,21 +957,12 @@ input[type="submit"][data-disabled] {
 }
 
 .section-header h1 {
-  flex-grow: 1;
   margin-bottom: 10px;
 }
 
 .section-header-description {
   font-style: italic;
-  font-weight: 300;
-  margin: 0 0 30px 0;
   word-break: break-word;
-}
-
-@media (min-width: 1024px) {
-  .section-header-description {
-    flex-basis: 100%;
-  }
 }
 
 .section-header .icon-lock {
@@ -2159,15 +2147,20 @@ input[type="submit"][data-disabled] {
 
 .community-header {
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.community-header .title {
-  margin-bottom: 0;
-  font-size: 16px;
+.community-intro-blurb {
+  padding: 2rem 0;
+}
+
+.community-intro-blurb p {
+  font-size: 1.35rem;
+  text-align: center;
 }
 
 .post-to-community {
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2196,12 +2189,16 @@ input[type="submit"][data-disabled] {
 /* Community topic page */
 .topic-header {
   border-bottom: 1px solid #ddd;
-  font-size: 13px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 @media (min-width: 768px) {
   .topic-header {
-    padding-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 1rem;
   }
 }
 
@@ -2227,15 +2224,7 @@ input[type="submit"][data-disabled] {
 
 /* Topic, post and user follow button */
 .community-follow {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .community-follow {
-    margin-bottom: 0;
-    width: auto;
-  }
+  text-align: left;
 }
 
 .community-follow button {
@@ -2647,19 +2636,11 @@ input[type="submit"][data-disabled] {
 }
 
 .post-sidebar {
-  border-top: 1px solid #ddd;
   text-align: center;
 }
 
-@media (min-width: 1024px) {
-  .post-sidebar {
-    border: 0;
-    text-align: initial;
-  }
-}
-
 .post-sidebar-title {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
