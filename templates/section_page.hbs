@@ -23,6 +23,7 @@
                 {{#if settings.show_follow_section}}
                 <div class="section-subscribe">{{subscribe}}</div>
                 {{/if}}
+
                 {{#if section.description}}
                 <p class="section-header-description">{{section.description}}</p>
                 {{/if}}
@@ -53,6 +54,7 @@
                     </a>
                 </li>
                 {{/each}}
+
                 <a
                     tabindex="0"
                     class="see-all-sections-trigger"
@@ -84,10 +86,12 @@
                         />
                     </svg>
                     {{/if}}
+
                     <a
                         href="{{url}}"
                         class="article-list-link"
                     >{{title}}</a>
+
                     {{#if internal}}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

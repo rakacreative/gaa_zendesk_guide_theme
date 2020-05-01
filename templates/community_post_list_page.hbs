@@ -29,27 +29,9 @@
 <div class="layout-container container-fluid">
 
     <header class="section-header community-header">
-        <span class="dropdown">
-            <button
-                class="dropdown-toggle"
-                aria-haspopup="true"
-            >
-                <h2 class="title">
-                    {{t 'all_posts'}}
-                </h2>
-            </button>
-            <span
-                class="dropdown-menu"
-                role="menu"
-            >
-                {{#link 'topics' role='menuitem'}}
-                {{t 'show_topics'}}
-                {{/link}}
-                {{#link 'posts' role='menuitem' selected='true'}}
-                {{t 'show_all_posts'}}
-                {{/link}}
-            </span>
-        </span>
+        <h2 class="title">
+            {{t 'all_posts'}}
+        </h2>
         <span class="post-to-community">
             {{link 'new_post' class='btn btn-primary btn-sm'}}
         </span>
@@ -69,13 +51,13 @@
                     role="menu"
                 >
                     {{#each filters}}
-                    <a
-                        href="{{url}}"
-                        aria-selected="{{selected}}"
-                        role="menuitem"
-                    >
-                        {{name}}
-                    </a>
+                        <a
+                            href="{{url}}"
+                            aria-selected="{{selected}}"
+                            role="menuitem"
+                        >
+                            {{name}}
+                        </a>
                     {{/each}}
                 </span>
             </span>
@@ -91,13 +73,13 @@
                     role="menu"
                 >
                     {{#each sorters}}
-                    <a
-                        href="{{url}}"
-                        aria-selected="{{selected}}"
-                        role="menuitem"
-                    >
-                        {{name}}
-                    </a>
+                        <a
+                            href="{{url}}"
+                            aria-selected="{{selected}}"
+                            role="menuitem"
+                        >
+                            {{name}}
+                        </a>
                     {{/each}}
                 </span>
             </span>
@@ -127,27 +109,27 @@
                     >{{title}}</a>
                     <span class="post-overview-item">
                         {{#if pinned}}
-                        <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                            <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
                         {{/if}}
 
                         {{#if featured}}
-                        <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                            <span class="status-label status-label-featured">{{t 'featured'}}</span>
                         {{/if}}
 
                         {{#is status 'none'}}
                         {{else}}
-                        <span
-                            class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
+                            <span
+                                class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
                         {{/is}}
                     </span>
 
                     <ul class="meta-group">
                         <li class="meta-data">{{author.name}}</li>
                         {{#if editor}}
-                        <li class="meta-data">{{date edited_at timeago=true}}</li>
-                        <li class="meta-data">{{t 'edited'}}</li>
+                            <li class="meta-data">{{date edited_at timeago=true}}</li>
+                            <li class="meta-data">{{t 'edited'}}</li>
                         {{else}}
-                        <li class="meta-data">{{date created_at timeago=true}}</li>
+                            <li class="meta-data">{{date created_at timeago=true}}</li>
                         {{/if}}
                     </ul>
                 </span>
@@ -176,11 +158,11 @@
         <h2 class="title">{{t 'featured_posts'}}</h2>
         <ul class="promoted-articles">
             {{#each featured_posts}}
-            <li class="promoted-articles-item">
-                <a href="{{url}}">
-                    {{title}}
-                </a>
-            </li>
+                <li class="promoted-articles-item">
+                    <a href="{{url}}">
+                        {{title}}
+                    </a>
+                </li>
             {{/each}}
         </ul>
     </div>
@@ -190,7 +172,7 @@
 <section class="section community-activity activity">
     <div class="layout-container container-fluid">
         {{#if help_center.community_enabled}}
-        {{recent_activity scope='community'}}
+            {{recent_activity scope='community'}}
         {{/if}}
     </div>
 </section>
@@ -201,7 +183,9 @@
             <div class="col-12">
                 <div class="content-cms">
                     <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
-                    {{link 'new_post' class='btn btn-primary'}}
+                    {{#link 'new_post' class='btn btn-primary'}}
+                        Create a new post
+                    {{/link}}
                 </div>
             </div>
         </div>
