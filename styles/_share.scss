@@ -12,20 +12,20 @@
 }
 
 .share li {
-    height: 25px;
-    width: 25px;
+    padding-right: 5px;
 }
 
 .share a {
     color: $c-blue-lagoon;
+
     &:hover {
         text-decoration: none;
         color: $brand_color;
     }
 
     & svg {
-        height: 18px;
-        width: 18px;
+        height: 26px;
+        width: 26px;
         display: block;
     }
 }

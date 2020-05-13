@@ -31,12 +31,15 @@
 
 /***** Promoted articles *****/
 .promoted-articles {
-    @include desktop {
-        flex-direction: row;
-    }
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    @include desktop {
+        flex-direction: row;
+    }
 
     &-item {
         @include desktop {

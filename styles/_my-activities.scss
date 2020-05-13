@@ -72,6 +72,7 @@
         align-items: flex-end;
         display: flex;
         flex-direction: column;
+        margin-bottom: 24px;
 
         .search {
             flex: 1;
@@ -196,15 +197,19 @@
 
 /* Following table */
 .subscriptions {
-    // &-subscribe button {
-    //     @include tablet {
-    //         width: auto;
-    //     }
-    //     @extend .button;
-    //     &[data-selected="true"] {
-    //         @extend .button-primary;
-    //     }
-    // }
+    &-subscribe button {
+        @include tablet {
+            width: auto;
+        }
+        @extend .button;
+
+        padding: 0.25rem 1.35rem;
+        font-size: 1rem;
+
+        &[data-selected="true"] {
+            @extend .button-primary;
+        }
+    }
 
     &-table {
         td:last-child {
@@ -245,6 +250,6 @@
     }
 }
 
-.no-activities {
-    color: $secondary-text-color;
-}
+// .no-activities {
+//     color: $secondary-text-color;
+// }

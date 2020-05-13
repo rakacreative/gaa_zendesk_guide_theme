@@ -1,6 +1,7 @@
 /***** Metadata *****/
 .meta-group {
     display: block;
+    padding: 0;
 }
 
 .meta-group * {
@@ -8,9 +9,7 @@
 }
 
 .meta-data {
-    color: $secondary-text-color;
     font-size: $font-size-small;
-    font-weight: $font-weight-light;
 
     &:not(:last-child)::after {
         content: "\00B7";

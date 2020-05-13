@@ -4,6 +4,11 @@
     border-bottom: 1px solid $border-color;
     padding: 20px 0;
 
+    &-list {
+        margin: 0;
+        padding: 0;
+    }
+
     &-heading {
         margin-bottom: 5px;
         margin-top: 0;
