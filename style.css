@@ -246,7 +246,7 @@ ul {
 }
 
 /***** Buttons *****/
-.button, .community-follow button,
+.button, .community-follow button, .subscriptions-subscribe button,
 input[type="submit"] {
   display: inline-block;
   font-weight: 700;
@@ -277,7 +277,7 @@ input[type="submit"] {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.button:hover, .community-follow button:hover, .button:active, .community-follow button:active, .button:focus, .community-follow button:focus,
+.button:hover, .community-follow button:hover, .subscriptions-subscribe button:hover, .button:active, .community-follow button:active, .subscriptions-subscribe button:active, .button:focus, .community-follow button:focus, .subscriptions-subscribe button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
@@ -285,14 +285,14 @@ input[type="submit"]:focus {
   text-decoration: none;
 }
 
-.button.button-primary, .community-follow button.button-primary,
+.button.button-primary, .community-follow button.button-primary, .subscriptions-subscribe button.button-primary, .subscriptions-subscribe button[data-selected="true"],
 input[type="submit"].button-primary {
   background-color: #bcd530;
   border-color: #bcd530;
   color: #fff;
 }
 
-.button.button-primary:hover, .community-follow button.button-primary:hover, .button.button-primary:focus, .community-follow button.button-primary:focus, .button.button-primary.focus, .community-follow button.button-primary.focus, .button.button-primary:active, .community-follow button.button-primary:active,
+.button.button-primary:hover, .community-follow button.button-primary:hover, .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button[data-selected="true"]:hover, .button.button-primary:focus, .community-follow button.button-primary:focus, .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button[data-selected="true"]:focus, .button.button-primary.focus, .community-follow button.button-primary.focus, .subscriptions-subscribe button.button-primary.focus, .subscriptions-subscribe button.focus[data-selected="true"], .button.button-primary:active, .community-follow button.button-primary:active, .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button[data-selected="true"]:active,
 input[type="submit"].button-primary:hover,
 input[type="submit"].button-primary:focus,
 input[type="submit"].button-primary.focus,
@@ -302,7 +302,7 @@ input[type="submit"].button-primary:active {
   color: #fff;
 }
 
-.button.disabled, .community-follow button.disabled, .button:disabled, .community-follow button:disabled, .button[data-disabled], .community-follow button[data-disabled],
+.button.disabled, .community-follow button.disabled, .subscriptions-subscribe button.disabled, .button:disabled, .community-follow button:disabled, .subscriptions-subscribe button:disabled, .button[data-disabled], .community-follow button[data-disabled], .subscriptions-subscribe button[data-disabled],
 input[type="submit"].disabled,
 input[type="submit"]:disabled,
 input[type="submit"][data-disabled] {
@@ -327,8 +327,6 @@ input[type="submit"][data-disabled] {
 .table th,
 .table th a {
   color: lighten(#116f8d, 20%);
-  font-size: 13px;
-  font-weight: 300;
   text-align: left;
 }
 
@@ -774,8 +772,8 @@ input[type="submit"][data-disabled] {
 }
 
 .avatar img {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .avatar .icon-agent {
@@ -1128,6 +1126,8 @@ input[type="submit"][data-disabled] {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 1024px) {
@@ -1362,7 +1362,7 @@ input[type="submit"][data-disabled] {
 
 .article-list-item {
   font-size: 16px;
-  padding: 15px 0;
+  padding: 8px 0;
 }
 
 .article-list-item a {
@@ -1375,21 +1375,6 @@ input[type="submit"][data-disabled] {
 }
 
 /***** Section pages *****/
-.section-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.section-content {
-  flex: 1;
-}
-
-@media (min-width: 1024px) {
-  .section-content {
-    flex: 0 0 80%;
-  }
-}
-
 .section-list {
   margin: 40px 0;
 }
@@ -1433,27 +1418,6 @@ input[type="submit"][data-disabled] {
   * Sidebar | Content | Free space
   * 17%     | 66%     | 17%
   */
-  flex: 1 0 auto;
-}
-
-@media (min-width: 1024px) {
-  .article {
-    flex: 1 0 66%;
-    max-width: 66%;
-    min-width: 640px;
-    padding: 0 30px;
-  }
-}
-
-.article-container {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .article-container {
-    flex-direction: row;
-  }
 }
 
 .article-header {
@@ -1629,7 +1593,7 @@ input[type="submit"][data-disabled] {
   border-top: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 32px 0;
 }
 
 @media (min-width: 768px) {
@@ -1717,9 +1681,15 @@ input[type="submit"][data-disabled] {
   text-decoration: none;
 }
 
+.recent-articles ul,
+.related-articles ul {
+  padding: 0;
+}
+
 .recent-articles li,
 .related-articles li {
   margin-bottom: 15px;
+  list-style-type: none;
 }
 
 /***** Attachments *****/
@@ -1768,8 +1738,7 @@ input[type="submit"][data-disabled] {
 }
 
 .share li {
-  height: 25px;
-  width: 25px;
+  padding-right: 5px;
 }
 
 .share a {
@@ -1782,8 +1751,8 @@ input[type="submit"][data-disabled] {
 }
 
 .share a svg {
-  height: 18px;
-  width: 18px;
+  height: 26px;
+  width: 26px;
   display: block;
 }
 
@@ -1792,6 +1761,11 @@ input[type="submit"][data-disabled] {
 .comment {
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
+}
+
+.comment-list {
+  margin: 0;
+  padding: 0;
 }
 
 .comment-heading, .recent-articles-title,
@@ -2136,8 +2110,7 @@ input[type="submit"][data-disabled] {
 }
 
 .community-featured-posts .title {
-  font-size: 18px;
-  font-weight: 600;
+  text-align: center;
 }
 
 .community-featured-posts, .community-activity {
@@ -2320,17 +2293,12 @@ input[type="submit"][data-disabled] {
 }
 
 .striped-list-title {
-  color: #bcd530;
   margin-bottom: 10px;
   margin-right: 5px;
 }
 
 .striped-list-title:hover, .striped-list-title:focus, .striped-list-title:active {
   text-decoration: underline;
-}
-
-.striped-list-title:visited {
-  color: darken(#bcd530, 20%);
 }
 
 .striped-list .meta-group {
@@ -2528,25 +2496,30 @@ input[type="submit"][data-disabled] {
 
 .post-info {
   min-width: 0;
-  padding-right: 20px;
+  padding-right: 10px;
   width: 100%;
 }
 
 [dir="rtl"] .post-info {
   padding-right: 0;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .post-meta {
   display: inline-block;
   flex: 1;
-  margin-left: 10px;
+  margin: 0 0 0 10px !important;
+  padding: 0 !important;
   vertical-align: middle;
 }
 
 [dir="rtl"] .post-meta {
   margin-left: 0;
   margin-right: 10px;
+}
+
+.post-meta ul {
+  padding: 0 !important;
 }
 
 .post-body img {
@@ -2722,6 +2695,8 @@ input[type="submit"][data-disabled] {
 .collapsible-nav-list {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -2962,6 +2937,7 @@ input[type="submit"][data-disabled] {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
@@ -3093,6 +3069,17 @@ input[type="submit"][data-disabled] {
 }
 
 /* Following table */
+.subscriptions-subscribe button {
+  padding: 0.25rem 1.35rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .subscriptions-subscribe button {
+    width: auto;
+  }
+}
+
 .subscriptions-table td:last-child {
   display: block;
 }
@@ -3130,10 +3117,6 @@ input[type="submit"][data-disabled] {
     font-size: inherit;
     font-weight: inherit;
   }
-}
-
-.no-activities {
-  color: lighten(#116f8d, 20%);
 }
 
 /***** Request *****/
@@ -3404,6 +3387,7 @@ input[type="submit"][data-disabled] {
 /***** Metadata *****/
 .meta-group {
   display: block;
+  padding: 0;
 }
 
 .meta-group * {
@@ -3411,9 +3395,7 @@ input[type="submit"][data-disabled] {
 }
 
 .meta-data {
-  color: lighten(#116f8d, 20%);
   font-size: 13px;
-  font-weight: 300;
 }
 
 .meta-data:not(:last-child)::after {

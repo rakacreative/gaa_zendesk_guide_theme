@@ -22,7 +22,6 @@
     }
 
     &-title {
-        color: $link_color;
         margin-bottom: 10px;
         margin-right: 5px;
 
@@ -30,10 +29,6 @@
         &:focus,
         &:active {
             text-decoration: underline;
-        }
-
-        &:visited {
-            color: $visited-link-color;
         }
     }
 
