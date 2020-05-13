@@ -12,10 +12,10 @@
             <div class="col-6 col-lg-3">
                 <div class="layout-logo">
                     {{#link 'help_center'}}
-                    <img
-                        src="{{settings.logo}}"
-                        alt="{{t 'home_page' name=help_center.name}}"
-                    >
+                        <img
+                            src="{{settings.logo}}"
+                            alt="GAA Connect logo"
+                        >
                     {{/link}}
                 </div>
             </div>
@@ -54,27 +54,27 @@
                     </div>
 
                     {{#if signed_in}}
-                    <div class="user-info dropdown">
-                        <button
-                            class="dropdown-toggle"
-                            aria-haspopup="true"
-                        >
-                            {{user_avatar class="user-avatar"}}
-                        </button>
-                        <div
-                            class="dropdown-menu dropdown-menu-right"
-                            role="menu"
-                        >
-                            {{link "my_activities" role="menuitem"}}
-                            {{my_profile role="menuitem"}}
-                            {{change_password role="menuitem"}}
-                            {{link "sign_out" role="menuitem"}}
+                        <div class="user-info dropdown">
+                            <button
+                                class="dropdown-toggle"
+                                aria-haspopup="true"
+                            >
+                                {{user_avatar class="user-avatar"}}
+                            </button>
+                            <div
+                                class="dropdown-menu dropdown-menu-right"
+                                role="menu"
+                            >
+                                {{link "my_activities" role="menuitem"}}
+                                {{my_profile role="menuitem"}}
+                                {{change_password role="menuitem"}}
+                                {{link "sign_out" role="menuitem"}}
+                            </div>
                         </div>
-                    </div>
                     {{else}}
-                    {{#link "sign_in" class="sign-in"}}
-                    {{t 'sign_in'}}
-                    {{/link}}
+                        {{#link "sign_in" class="sign-in"}}
+                            {{t 'sign_in'}}
+                        {{/link}}
                     {{/if}}
                 </div>
             </div>
