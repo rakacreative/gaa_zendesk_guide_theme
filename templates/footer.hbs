@@ -2,7 +2,7 @@
     <div class="layout-footer d-print-none">
         <div class="layout-container container-fluid">
             <div class="row align-items-center">
-                <div class="col-12 col-md-5 col-lg-4">
+                <div class="col-12 col-md-5">
                     <nav class="nav--footer">
                         <ul class="footer-menu">
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12247">
@@ -39,15 +39,8 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-12 col-md-7 col-lg-8">
-                    <div class="layout-social">
-                        <h4 class="social-hashtag">
-                            Check out <a
-                                href="https://twitter.com/hashtag/GOALConf20?src=hash"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                            >#GOALConf20</a>
-                        </h4>
+                <div class="col-12 col-md-7">
+                    <div class="layout-social justify-content-end">
                         <section class="layout-social-links">
                             <h3 class="sr-only">Find us on social media</h3>
                             <ul class="nav nav--social-links">
@@ -269,14 +262,18 @@
                 <div class="copyright">
                     <span class="nobr">
                         Copyright ©
-                        <script>document.write(new Date().getFullYear())</script> Global Aquaculture Alliance
+                        <span id="copyrightYear"></span> Global Aquaculture Alliance
                     </span>
+                    <script>
+                        document.getElementById('copyrightYear').innerHTML = new Date().getFullYear();
+                    </script>
                 </div>
                 <div class="rights-statement">All rights reserved.</div>
                 <div class="legal-links d-print-none">
                     <a
                         href="https://www.aquaculturealliance.org/privacy-policy/"
                         target="_blank"
+                        rel="noopener"
                     >Privacy</a>
                 </div>
             </div>
